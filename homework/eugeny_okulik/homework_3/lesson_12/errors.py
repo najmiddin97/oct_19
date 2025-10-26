@@ -6,4 +6,4 @@ def calc(x, y):
         return('Fail')
 
 print(calc(int(input('raqam')), int(input('raqam'))))
-print('hello!')
+print('hello! guys')

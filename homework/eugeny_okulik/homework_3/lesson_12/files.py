@@ -13,7 +13,7 @@ base_path = os.path.dirname(__file__)
 # file_path = f'{base_path}/data.txt'
 # print(file_path)
 file_path = os.path.join(base_path, 'data.txt')
-new_file_path = os.path.join(base_path, 'data2.txt')
+new_files_path = os.path.join(base_path, 'data2.txt')
 print(file_path)
 
 
@@ -24,7 +24,7 @@ def read_file():
 
 
 for data_line in read_file():
-    with open(new_file_path, 'a') as new_file:
+    with open(new_files_path, 'a') as new_file:
         data_line = data_line.replace('.', '').replace(',', '')
         new_file.write(data_line)
 
