@@ -2,6 +2,8 @@ import psycopg2
 import uuid
 from datetime import datetime, UTC
 import re
+import creds
+
 
 def slugify(text):
     text = text.lower()

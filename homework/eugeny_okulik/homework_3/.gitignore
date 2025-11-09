@@ -21,4 +21,5 @@ env/
 
 # macOS system files
 .DS_Store
+creds.py
 
