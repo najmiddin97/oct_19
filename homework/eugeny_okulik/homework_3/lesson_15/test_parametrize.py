@@ -1,5 +1,7 @@
 import pytest
 import requests
+from faker import Faker
+fake = Faker(locale='ru_RU')
 
 BASE_URL = "https://api-inextlynk.upgrow.uz/api/v1"
 DEVICE_INFO = {
@@ -15,8 +17,11 @@ DEVICE_INFO = {
     "email,password,expected_status",
     [
         ("nurimen738@gmail.com", "qwerty1@", 200),   # success
-        ("nurimen738@gmail.com", "Qwerty1@", 400), # fail
-        ("nurimen738@gmail.com", "qWerty1@", 400)       # fail
+        (fake.email(), "Qwerty1@", 400), # fail
+        (fake.email(), "qwerty1@", 400),  #fail
+        (fake.email(), "qwerty1@", 400),  # fail
+        (fake.email(), "Qwerty1@", 400),  # fail
+        (fake.email(), "qWerty1@", 400)   # fail
     ]
 )
 
