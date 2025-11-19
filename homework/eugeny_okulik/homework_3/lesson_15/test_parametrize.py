@@ -16,7 +16,7 @@ DEVICE_INFO = {
 @pytest.mark.parametrize(
     "email,password,expected_status",
     [
-        ("nurimen738@gmail.com", "qwerty1@", 200),   # success
+        ("nurimen738@gmail.com", "1", 200),   # success
         (fake.email(), "Qwerty1@", 400), # fail
         (fake.email(), "qwerty1@", 400),  #fail
         (fake.email(), "qwerty1@", 400),  # fail

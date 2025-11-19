@@ -6,7 +6,6 @@ def all_posts():
     )
     # Status code assert
     assert response.status_code == 200
-
     data = response.json()
 
     # Main keys assert
