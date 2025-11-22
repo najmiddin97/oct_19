@@ -13,6 +13,7 @@ class TestPostApi(unittest.TestCase):
         slug = 'sement-xaridi-uchun-yetkazib-beruvchi-izlanmoqda'
         response = requests.get(f'https://api-inextlynk.upgrow.uz/api/v1/marketplace/list/{slug}').json()
         self.assertEqual(response["slug"], slug)
+        print(slug)
 
 
 
